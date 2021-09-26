@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.navigation {
+	position: fixed;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100vw;
+	height: 80px;
+	background: transparent;
+
+	.header-navigation {
+		display: flex;
+		align-items: center;
+
+		//ロゴ
+		h1 {
+			margin-left: 20px;
+			width: 200px;
+			height: 43px;
+			
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+			}
+		}
+
+		//ナビゲーションリスト
+		ul {
+			display: flex;
+			align-items: center;
+			margin-left: 120px;
+			font-size: 1.6rem;
+
+			li {
+				margin-right: 33px;
+				color: white;
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	
+	//予約ボタン
+	.reserve-button {
+		margin-right: 20px;
+		width: 170px;
+		height: 54px;
+		background: #978F10;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 54px;
+			color: white;
+			font-size:1.6rem;
+
+			img {
+				margin-right: 10px;
+				width: 22px;
+				height: 22px;
+				object-fit: contain;
+			}
+		}
+	}
+}
+

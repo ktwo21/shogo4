@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	display: none;
+	border: 1px solid #707070;
+	max-width: 550px;
+	width: 100%;
+	max-height: 600px;
+	height: 100%;
+	background: white;
+}
+
+//クローズボタン
+.close-button {
+	position: absolute;
+	top: 20px;
+	right: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:18px;
+	height: 18px;
+	
+	 span{
+		width: 18px;
+		height: 1px;
+		background: #000;
+		transform: rotate(45deg);
+		
+		&::after {
+			content: "";
+			display: block;
+			width: 18px;
+			height: 1px;
+			background: #000;
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+//タイトル
+.modal .modal-title {
+	margin-top: 25px;
+	margin-bottom: 26px;
+	font-size: 2rem;
+	text-align: center;
+}
+
+//フォーム
+.modal form {
+	margin: 0 auto;
+	border-top: 1px solid $gray;
+	padding: 33px 0 90px;
+	max-width: 430px;
+	width: 90%;
+	
+	ul li {
+	margin-bottom: 12px;
+
+		&:last-of-type {
+			margin-bottom: 64px;
+		}
+
+		p {
+			margin-bottom: 5px;
+			font-size: 1.6rem;
+		}
+		
+		input {
+			border: 1px solid $gray;
+			width: 100%;
+			height: 32px;
+			
+			&[placeholder] {
+				color:#797878;
+				font-size: 1.4rem;
+				line-height: 19px;
+			}
+		}
+		
+		select {
+			border: 1px solid $gray;
+			width: 100%;
+			height: 32px;
+		}
+	}
+}
+
+//送信ボタン
+.modal form button {
+	width: 198px;
+	height: 42px;
+	font-size:1.6rem;
+	line-height: 42px;
+	text-align: center;
+}
+

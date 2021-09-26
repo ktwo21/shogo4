@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.hero-area {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: url(../image/mainbg01.jpg)no-repeat center/cover;
+	
+	//コピー
+	.copy {
+		position: absolute;
+		top: 50%;
+		right: 26%;
+		transform: translateY(-50%);
+		
+		h1 {
+			color: white;
+			font-size: 3.4rem;
+			font-weight: 700;
+			line-height: calc(82/34);
+			letter-spacing: 0.3em;
+			writing-mode: vertical-rl;
+		}
+	}
+}

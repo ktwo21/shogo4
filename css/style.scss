@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+//ここから関数
+$gray: #E7E7E7;
+$border: #707070;
+//ここまで関数
+
+//ここから@mixin
+//ここまで@mixin
+
+//ここから大枠スタイル
+
+html {
+	font-size: 62.5%;
+}
+
+*,*::before,*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+}
+
+//ここまで大枠スタイル
+
+//ここから共通パーツ
+
+.title {
+	text-align: center;
+	
+	h2 {
+		font-size: 3.6rem;
+	
+		&::before {
+			content: url(../image/title-icon.svg);
+			display: block;
+			margin: 0 auto 13px;
+			width: 40px;
+			height: 40px;
+			object-fit: contain;
+		}
+	}
+}
+
+//ここまで共有パーツ
+
+
+//ここから@import
+
+@import "navigation";
+@import "modal";
+@import "heroarea";
+@import "concept";
+@import "menu";
+@import "plan";
+
+
+

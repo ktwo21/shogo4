@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.menu {
+	padding: 106px 0 78px;
+	
+	.layer-introduction {
+		display: flex;
+		justify-content: flex-start;
+		gap: 7vw;
+		margin-bottom: 122px;
+		
+		&:nth-of-type(even) {
+			flex-direction: row-reverse;
+		}
+		
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		
+		img {
+			max-width: 1050px;
+			width: 54%;
+			max-height: 545px;
+			height: 28vw;
+			object-fit: cover;
+		}
+		
+		figcaption {
+			padding-top: 35px;
+			
+			h2 {
+				margin-bottom: 1em;
+				font-size: calc(2.5rem + 11 * (100vw - 1280px)/640);
+				line-height: calc(62/36);
+			}
+			
+			p {
+				margin-bottom: 3em;
+				font-size: calc(1.4rem + 2 * (100vw - 1280px)/640);
+				line-height: calc(32/16);
+			}
+			
+			.to-layer {
+				border: 1px solid $border;
+				width: 200px;
+				height: 56px;
+				text-align: center;
+				
+				a {
+					width: 100%;
+					font-size: 1.6rem;
+					line-height: 56px;
+				}
+			}
+		}
+	}
+}
