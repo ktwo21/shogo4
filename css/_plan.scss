@@ -13,6 +13,9 @@
 		display: flex;
 		justify-content: center;
 		gap: 4vw;
+		margin: 0 auto;
+		max-widht: 1180px;
+		width: 90%;
 		
 		figure {
 			width: 331px;
@@ -32,12 +35,41 @@
 					line-height: calc(32/20);
 				}
 				.item-text {
-					font-size: 1.6rem;
+					font-size: max(calc(1.4rem + 2 * (100vw - 1280px)/640), 1.4rem);
 					line-height: calc(32/16);
 				}
 				
 			}
 		}
+		
+		@include w1180 {
+			align-items: center;
+			flex-direction: column;
+			
+			figure {
+				width: 90%;
+				
+				img {
+					height: auto;
+				}
+				
+				figcaption {
+					padding: 15px;
+					
+					h3 {
+						font-size: calc(1.8rem + 7 * (100vw - 320px)/860);
+					}
+					
+					.item-text {
+						margin-bottom: 2em;
+					}
+				}
+			}
+		}
+	}
+	
+	@include tablet {
+		padding: 80px 0;
 	}
 }
 

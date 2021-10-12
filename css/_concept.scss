@@ -2,41 +2,80 @@
 
 .concept {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 118px;
 	margin: 0 auto;
 	padding: 146px 0 80px;
 	width: 100%;
 	background: url(../image/bg01.jpg)no-repeat center/cover;
 	writing-mode: vertical-rl;
 	
-	
-	header {
+	.wrap{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 6vw;
+		margin: 0 auto;
+		max-width: 1180px;
+		width: 90%;
 		
-		h2 {
-			font-size: 2.8rem;
-			line-height: calc(60/28);
-			letter-spacing: 0.5em;
-			text-indent: -3em;
+		header {
+			
+			h2 {
+				font-size: 2.8rem;
+				line-height: calc(60/28);
+				letter-spacing: 0.5em;
+				text-indent: -3em;
+			}
+		}
+		
+		.concept-text {
+			display: flex;
+			flex-direction: column;
+			gap: 6vw;
+			
+			p {
+				font-size: 1.6rem;
+				line-height: calc(44/16);
+				letter-spacing: 0.5em;
+				white-space: nowrap;
+
+				span {
+					margin: 0.2em;
+					text-combine-upright: all;
+				}
+				
+			
+					@include mobile {
+						line-height: calc(28/16);
+						white-space: unset;
+					}
+				
+				&:last-of-type {
+					font-size: 2.2rem;
+					line-height: calc(32/22);
+					text-align: right;
+				}
+			}
 		}
 	}
 	
-	.concept-text {
-		display: flex;
-		flex-direction: column;
-		gap: 118px;
+	@include tablet {
+		padding: 80px 0;
+		writing-mode: unset;
 		
-		p {
-			font-size: 1.6rem;
-			line-height: calc(44/16);
-			letter-spacing: 0.5em;
-			white-space: nowrap;
+		.wrap {
+		
+			header {
 			
-			&:last-of-type {
-				font-size: 2.2rem;
-				line-height: calc(32/22);
-				text-align: right;
+				h2 {
+					font-size: calc(2.2rem + 6 * (100vw - 320px)/448);
+					text-indent: 0;
+				}
+			}
+			
+			.concenpt-text {
+				p {
+					font-size: calc(1.4rem + 2 * (100vw - 320px)/448);
+				}
 			}
 		}
 	}

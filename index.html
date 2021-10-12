@@ -2,53 +2,73 @@
 <html lang="ja">
 
 <head>
-	<meta carset="UTF-8">
-	<meta http^equiv="X-UA-Cmpatible" content="IE-edge">
-	<meta name="viwport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>石井花壇 | 温海温泉旅館【公式サイト】</title>
 	<meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
 	
 	<!-- リセットCSS -->
 	<link rel="stylesheet" href="css/reset.css">
-	<!- AOS.css -->
-	
+	<!-- AOS.css -->
+	<link rel="stylesheet" href="css/aos.css">
+	<!-- flatpickr -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 	<!-- カスタムCSS -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css?202110012">
 	
 	<!-- ファビコン -->
-	
+	<link rel="icon"  href="image/favicon.svg">
 	<!-- OGP -->
 	
 </head>
 
 <body>
 
-<header class="navigation">
+<header class="navigation" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
 
 	<div class="header-navigation">
 		<h1>
-			<img src="image/logo-white.svg" alt="ロゴ">
+			<a href="#"><img src="image/logo-white.svg" alt="ロゴ"></a>
 		</h1>
 
 		<nav>
 			<ul>
 				<li><a href="room.html">お部屋</a></li>
 				<li><a href="food.html">お料理</a></li>
-				<li><a href="bath.html">温泉</a></li>
-			<ul>
+				<li><a href="onsen.html">温泉</a></li>
+			</ul>
 		</nav>
 	</div><!-- /.header-navigation" -->
 	
-	<div class="reserve-button">
-		<a id="js-moda-open" href=""><img src="image/reserve-icon.svg">宿泊予約</a>
-	</div><!-- /.reserve-button" -->
-
+	<div class="navigation-right">
+		
+		<div class="reserve-button" id="js-modal-open">
+			<img src="image/reserve-icon.svg" alt="予約アイコン"><span>宿泊予約</span>
+		</div><!-- /.reserve-button" -->
+		
+		<!-- 🍔 -->
+		<div class="hamburger-button">
+			<span class="bar"></span>
+		</div>
 	
+		<nav class="hamburger-menu">
+			<ul>
+				<li><a href="room.html">お部屋</a></li>
+				<li><a href="food.html">お料理</a></li>
+				<li><a href="onsen.html">温泉</a></li>
+			</ul>
+		</nav>
+	
+	</div>
 </header>
 
+<!-- 白透過背景 -->
+<div class="white-bg"></div>
+	
+
 <div class="modal">
-	<div class="close-button">
-		<span></span>
+	<div class="close-button" id="close-button">
 	</div>
 
 	<div class="modal-title">
@@ -63,10 +83,10 @@
 			</li>
 			<li>
 				<p>メールアドレス</p>
-				<input type="mail" placeholder="例：Example@example.com">
+				<input type="email" placeholder="例：Example@example.com">
 			</li>
 			<li>
-				<p>ご希望プラン（空いているプランのみ表示されます）</p>
+				<p>ご希望プラン<span>（空いているプランのみ表示されます）</span></p>
 				<select name="plan" size="1" required>
 					<option value="">プランを選択してください</option>
 					<option value="food-plan">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
@@ -76,7 +96,7 @@
 			</li>
 			<li>
 				<p>日時選択</p>
-				<input type="date" min="2021-09-01" max="2022-12-31" placeholder="日付を選択してください">
+				<input type="text" class="selector" placeholder="日付を選択してください">
 			</li>
 		</ul>
 		
@@ -87,7 +107,12 @@
 <main>
 
 <!-- ここからヒーローエリア -->
-<section class="hero-area">
+<section class="hero-area" data-aos="fade-in" data-aos-duration="3000" data-aos-once="true">
+
+	<div class="bgImg src1"></div>
+	<div class="bgImg src2"></div>
+	<div class="bgImg src3"></div>
+	
 	<header class="copy">
 	 	<h1>頑張る人の<br>頑張らない時間</h1>
 	 </header>
@@ -96,60 +121,63 @@
 
 <!-- ここからコンセプト -->
 <article class="concept">
-	<header>
-		<h2>温海温泉の<br>美しさに癒されて</h2>
-	</header>
-	
-	<div class="concept-text">
-		<p>東北の奥座敷である温海温泉郷<br>
-			開湯は約1300年前とされ、役小角が<br>
-			発見したと伝えられます</p>
-		<p>石井花壇は江戸より続く由緒ある旅館で<br>
-			クラシックな作りの中に大正ロマンあふれる<br>
-			内装を残しております</p>
-		<p>圧倒的癒やしの空間で<br>
-			頑張る現代人に<br>
-			頑張らない圧倒的な非日常をご提供します</p>
-		<p>石井花壇</p>
+
+	<div class="wrap">
+		<header data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+			<h2>温海温泉の<br>美しさに癒されて</h2>
+		</header>
+		
+		<div class="concept-text" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+			<p>東北の奥座敷である温海温泉郷<br class="br-mobile">
+				開湯は約<span>1</span><span>3</span><span>0</span><span>0</span>年前とされ、役小角が<br class="br-mobile">
+				発見したと伝えられます</p>
+			<p>石井花壇は江戸より続く由緒ある旅館で<br class="br-mobile">
+				クラシックな作りの中に大正ロマンあふれる<br class="br-mobile">
+				内装を残しております</p>
+			<p>圧倒的癒やしの空間で<br class="br-mobile">
+				頑張る現代人に<br class="br-mobile">
+				頑張らない圧倒的な非日常をご提供します</p>
+			<p>石井花壇</p>
+		</div>
 	</div>
 </article>
 <!-- ここまでコンセプト -->
 
 <!-- ここからメニュー -->
 <article class="menu">
-	<figure class="layer-introduction">
+	<figure class="layer-introduction" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 		<img src="image/oheya-top.jpg">
 		<figcaption>
 			<header>
 				<h2>喧騒から離れた空間<br>心落ち着く至極のひととき</h2>
 			</header>
-			<p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>ひたすらにゆったりと…。<br>最高級の「何もしない時間」をお過ごしください。</p>
+			<p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br class="br-mobile">ひたすらにゆったりと…。<br>最高級の「何もしない時間」をお過ごしください。</p>
 			<div class="to-layer">
 				<a href="oheya.html">お部屋について</a>
 			</div>
 		</figcaption>
 	</figure>
 	
-	<figure class="layer-introduction">
+	<figure class="layer-introduction" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 		<img src="image/menu-top.jpg">
 		<figcaption>
 			<header>
 				<h2>出迎えるのは<br>極上の温海料理</h2>
 			</header>
-			<p>最も旬の食材を愉しむ、最高の贅沢を<br>最高級A5ランクの米沢牛と共に頂く。<br>あなたの人生史に残る「極上の感動」を<br>お約束します。</p>
+			<p>最も旬の食材を愉しむ、最高の贅沢を<br class="br-mobile">最高級A5ランクの米沢牛と共に頂く。<br>あなたの人生史に残る「極上の感動」を<br class="br-mobile">お約束します。</p>
 			<div class="to-layer">
 				<a href="food.html">料理について</a>
 			</div>
 		</figcaption>
 	</figure>
 	
-	<figure class="layer-introduction">
+	<figure class="layer-introduction" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 		<img src="image/onsen-top.jpg">
 		<figcaption>
 			<header>
 				<h2>疲れ切った身体にやすらぎを<br>温海の源泉に癒やされて</h2>
 			</header>
-			<p>古くは弘法大師の病をも治療したと言われる熱海の泉質。<br>現代人の疲弊しきった身体を修復する最高級の湯治場として<br>ご活用ください。</p>
+			<p>古くは弘法大師の病をも治療したと言われる熱海の泉質。<br>現代人の疲弊しきった身体を修復する最高級の湯治場として<br class="br-mobile">ご活用ください。</p>
 			<div class="to-layer">
 				<a href="onsen.html">温泉について</a>
 			</div>
@@ -160,7 +188,7 @@
 <!-- ここまでメニュー -->
 
 <!-- ここから宿泊プラン -->
-<article class="plan">
+<article class="plan" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 	<header class="title">
 		<h2>おすすめご宿泊プラン</h2>
 	</header>
@@ -170,7 +198,7 @@
 			<img src="image/recommended01.jpg" alt="朝食プラン">
 			<figcaption>
 				<header>
-					<h3>朝食付きプラン、日本近海で取れた<br>のどぐろを朝食として…</h3>
+					<h3>朝食付きプラン、日本近海で取れた<br class="br-mobile">のどぐろを朝食として…</h3>
 				</header>
 				<div class="item-text">
 					<p>最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
@@ -182,7 +210,7 @@
 			<img src="image/recommended02.jpg" alt="蟹プラン">
 			<figcaption>
 				<header>
-					<h3>【期間限定】熱海蟹をたっぷりと<br>愉しむプラン。</h3>
+					<h3>【期間限定】熱海蟹をたっぷりと<br class="br-mobile">愉しむプラン。</h3>
 				</header>
 				<div class="item-text">
 					<p>温海で水揚げされた蟹は「温海蟹」として知られ、嗜好品として愛されてきました。この宿泊プランでは存分に</p>
@@ -206,27 +234,27 @@
 <!-- ここまで宿泊プラン -->
 
 <!-- ここからお知らせ -->
-<article class="news">
+<article class="news" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 	<header class="title">
 		<h2>お知らせ</h2>
-	</heder>
+	</header>
 	
 	<div class="tab-list">
 		<ul>
-			<li><a href="tab1">営業情報</a></li>
-			<li><a href="tab2">その他</a></li>
+			<li class="list focus">営業情報</li>
+			<li class="list">その他</li>
 		</ul>
 	</div>
 	
-	<div class="tab-list">
-		<div id="tab1">
+	<div class="card-list">
+		<div class="items active">
 			<article class="news-card">
 				<div class="card-image">
 					<img src="image/news01.jpg" alt="イメージ画像">
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/12/24">2020.12.24</time>
+					<time datetime="2020-12-24">2020.12.24</time>
 					<p>年末最後の営業日は27日になります。</p>
 				</div>
 			</article>
@@ -237,7 +265,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/12/11">2020.12.11</time>
+					<time datetime="2020-12-11">2020.12.11</time>
 					<p>12.21は臨時休業とさせていただきますので、よろしくお願いします。</p>
 				</div>
 			</article>
@@ -248,7 +276,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/12/01">2020.12.01</time>
+					<time datetime="2020-12-01">2020.12.01</time>
 					<p>和室の改装を行いますため、12.10はお休みさせていただきます。。</p>
 				</div>
 			</article>
@@ -259,7 +287,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/12/01">2020.12.24</time>
+					<time datetime="2020-12-01">2020.12.24</time>
 					<p>年末最後の営業日のお知らせ</p>
 				</div>
 			</article>
@@ -269,7 +297,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/12/01">2020.12.24</time>
+					<time datetime="2020-12-01">2020.12.24</time>
 					<p>年末最後の営業日のお知らせ</p>
 				</div>
 			</article>
@@ -279,20 +307,20 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/12/01">2020.12.24</time>
+					<time datetime="2020-12-01">2020.12.24</time>
 					<p>年末最後の営業日のお知らせ</p>
 				</div>
 			</article>
 		</div><!-- /#tab1 -->
 		
-		<div id="tab2">
+		<div class="items">
 			<article class="news-card">
 				<div class="card-image">
 					<img src="image/news02.jpg" alt="イメージ画像">
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/11/24">2020.12.24</time>
+					<time datetime="2020-11-24">2020.12.24</time>
 					<p>その他のお知らせ</p>
 				</div>
 			</article>
@@ -303,7 +331,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/11/24">2020.12.24</time>
+					<time datetime="2020-11-24">2020.12.24</time>
 					<p>その他のお知らせ</p>
 				</div>
 			</article>
@@ -314,7 +342,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/11/24">2020.12.24</time>
+					<time datetime="2020-11-24">2020.12.24</time>
 					<p>その他のお知らせ</p>
 				</div>
 			</article>
@@ -325,7 +353,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/11/24">2020.12.24</time>
+					<time datetime="2020-11-24">2020.12.24</time>
 					<p>その他のお知らせ</p>
 				</div>
 			</article>
@@ -335,7 +363,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/11/24">2020.12.24</time>
+					<time datetime="2020-11-24">2020.12.24</time>
 					<p>その他のお知らせ</p>
 				</div>
 			</article>
@@ -345,7 +373,7 @@
 				</div>
 				
 				<div class="card-text">
-					<time timedate="2020/11/24">2020.12.24</time>
+					<time datetime="2020-11-24">2020.12.24</time>
 					<p>その他のお知らせ</p>
 				</div>
 			</article>
@@ -355,7 +383,7 @@
 <!-- ここまでお知らせ -->
 
 <!-- ここからアクセス -->
-<article class="access">
+<article class="access" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 	<header class="title">
 		<h2>アクセス</h2>
 	</header>
@@ -373,10 +401,10 @@
 			</dl>
 			<p>&lowast;4名以上のご予約の場合は、最寄り駅の「鶴岡駅」より送迎が可能ですので、ご連絡ください。</p>
 		</figcaption>
-	<figure>
+	</figure>
 	
 	<div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24933.858417389387!2d139.5810508551066!3d38.63203904517947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c6dbd6c03ae15%3A0x10bc5da99bc816ef!2z44CSOTk5LTcyMDUg5bGx5b2i55yM6ba05bKh5biC5rip5rW3!5e0!3m2!1sja!2sjp!4v1632493971381!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24933.858417389387!2d139.5810508551066!3d38.63203904517947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c6dbd6c03ae15%3A0x10bc5da99bc816ef!2z44CSOTk5LTcyMDUg5bGx5b2i55yM6ba05bKh5biC5rip5rW3!5e0!3m2!1sja!2sjp!4v1632493971381!5m2!1sja!2sjp" style="border:0;" allowfullscreen=""></iframe>
 	</div>
 </article>
 <!-- ここまでアクセス -->
@@ -388,24 +416,32 @@
 		<ul>
 			<li><a href="room.html">お部屋</a></li>
 			<li><a href="food.html">お料理</a></li>
-			<li><a href="bath.html">温泉</a></li>
-		<ul>
+			<li><a href="onsen.html">温泉</a></li>
+		</ul>
 	</nav>
 	
 	<div class="infomation">
 		<div class="footer-logo">
 		 	<img src="image/footer-logo.svg" alt="フッターロゴ">
 		</div>
-		<div class="footer-adress">
+		<div class="footer-address">
 			<p><span>&#12306;000-0000</span>山形県鶴岡市xxxxxxxxxx<p>
 			<p><span>TEL.000-0000-0000</span>FAX.00-0000-0000</p>
-		<div>
+		</div>
 	</div>
 	
 	<div class="copyright">
 		<small>Copyright &copy; 石井花壇 All Rights Reserved.</small>
 	</div>
 </footer>
+
+<!-- jQuery -->
+<script src="js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/style.js"></script>
+
 </body>
 
 </html>

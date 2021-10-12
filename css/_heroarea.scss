@@ -4,18 +4,69 @@
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-	background: url(../image/mainbg01.jpg)no-repeat center/cover;
+	overflow: hidden;
+	
+	//背景画像
+	.bgImg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		animation: bgAnime 21s infinite;
+		opacity: 0;
+	}
+	.src1 {
+		background: url(../image/mainbg01.jpg)no-repeat center/cover;
+	}
+	.src2 {
+		position: relative;
+		animation-delay : 7s;
+		background: url(../image/mainbg02.jpg)no-repeat center/cover;
+		height: 100vh;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100vh;
+			background: rgba(0,0,0,.2);
+		}
+	}
+	.src3 {
+		animation-delay : 14s;
+		background: url(../image/mainbg03.jpg)no-repeat center/cover;
+	}
+	
+	@keyframes bgAnime {
+	0% { opacity: 0; z-index:1}
+	10% { opacity: 1; }
+	30% { opacity: 1; }
+	40% { opacity: 1; }
+	100% { opacity: 0; transform: scale(1.1); }
+}
 	
 	//コピー
 	.copy {
 		position: absolute;
 		top: 50%;
-		right: 26%;
-		transform: translateY(-50%);
+		right: 24%;
+		z-index: 2;
+		transform: translate(-24%, -50%);
+		
+		@include tablet {
+			right: 50%;
+			transform: translate(50%, -50%);
+		}
 		
 		h1 {
 			color: white;
-			font-size: 3.4rem;
+			font-size: calc(2.5rem + 9 * (100vw - 375px)/1545);
 			font-weight: 700;
 			line-height: calc(82/34);
 			letter-spacing: 0.3em;

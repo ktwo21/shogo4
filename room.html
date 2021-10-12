@@ -2,46 +2,68 @@
 <html lang="ja">
 
 <head>
-	<meta carset="UTF-8">
-	<meta http^equiv="X-UA-Cmpatible" content="IE-edge">
-	<meta name="viwport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>お部屋 - 石井花壇 | 温海温泉旅館【公式サイト】</title>
 	
 	<!-- リセットCSS -->
 	<link rel="stylesheet" href="css/reset.css">
-	<!- AOS.css -->
-	
+	<!-- AOS.css -->
+	<link rel="stylesheet" href="css/aos.css">
+	<!-- flatpickr -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 	<!-- カスタムCSS -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css?202110012">
 	
 	<!-- ファビコン -->
-	
+	<link rel="icon"  href="image/favicon.svg">
 	<!-- OGP -->
 	
 </head>
 
 <body>
 
-<header>
-	<h1>
-		<img src="image/logo-white.svg" alt="ロゴ">
-	<h1>
-	
+<header class="navigation under-page" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+
 	<div class="header-navigation">
+		<h1>
+			<a href="index.html"><img src="image/logo-white.svg" alt="ロゴ"></a>
+		</h1>
+
 		<nav>
 			<ul>
 				<li><a href="room.html">お部屋</a></li>
 				<li><a href="food.html">お料理</a></li>
-				<li><a href="bath.html">温泉</a></li>
+				<li><a href="onsen.html">温泉</a></li>
 			<ul>
 		</nav>
-		
-		<div class="reserve-button">
-			<a id="js-moda-open" href=""><img src="image/reserve-icon.svg">宿泊予約</a>
-		</div><!-- /.reserve-button" -->
 	</div><!-- /.header-navigation" -->
 	
+	<div class="navigation-right">
+		
+		<div class="reserve-button" id="js-modal-open">
+			<img src="image/reserve-icon.svg" alt="予約アイコン"><span>宿泊予約</span>
+		</div><!-- /.reserve-button" -->
+		
+		<!-- 🍔 -->
+		<div class="hamburger-button">
+			<span class="bar"></span>
+		</div>
+	
+		<nav class="hamburger-menu">
+			<ul>
+				<li><a href="room.html">お部屋</a></li>
+				<li><a href="food.html">お料理</a></li>
+				<li><a href="onsen.html">温泉</a></li>
+			</ul>
+		</nav>
+	
+	</div>
 </header>
+
+<!-- 白透過背景 -->
+<div class="white-bg"></div>
 
 <div class="modal">
 	<div class="close-button">
@@ -59,7 +81,7 @@
 				</li>
 				<li>
 					<p>メールアドレス</p>
-					<input type="mail" placeholder="例：Example@example.com">
+					<input type="email" placeholder="例：Example@example.com">
 				</li>
 				<li>
 					<p>ご希望プラン（空いているプランのみ表示されます）</p>
@@ -79,11 +101,11 @@
 		
 		<button type="submit">送信する</button>
 	</form>
-<div><!-- /.modal -->
+</div><!-- /.modal -->
 
 
 <!-- ここからヒーローエリア -->
-<section calss="hero-area_room">
+<section class="hero-area_under room" data-aos="fade-in" data-aos-duration="3000" data-aos-once="true">
 	<header>
 	 	<h2>お部屋</h2>
 	 </header>
@@ -93,14 +115,14 @@
 <!-- ここからパンくずリスト -->
 <nav class="breadcrumbs">
 	<ol itemscope itemtype="https://schema.org/BreadcrumbList">
-		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 			<a itemprop="item" href="index.html">
 				<span itemprop="name">トップ</span>
 			</a>
 			<meta itemprop="position" content="1" />
 		</li>
 		
-		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 			<a itemprop="item" href="room.html">
 				<span itemprop="name">お部屋</span>
 			</a>
@@ -113,12 +135,12 @@
 <main>
 <!-- ここからページコンテンツ -->
 
-<article class="main-area">
+<article class="main-area" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 	<div class="page-description">
 		<p>創業より受け継がれてきた石井花壇の和の造り<br>温海の雄大な絶景を堪能していただけるように設計された客室<br>ゆるやかに流れ行く時間に身を委ねて</p>
 	</div>
 	
-	<figure>
+	<figure data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" delay="300">
 		<img src="image/oheya01.jpg" alt="客室">
 		<figcaption>
 			<header>
@@ -134,7 +156,7 @@
 		</figcaption>
 	</figure>
 	
-	<figure>
+	<figure data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" delay="300">
 		<img src="image/oheya02.jpg" alt="客室">
 		<figcaption>
 			<header>
@@ -151,7 +173,7 @@
 		</figcaption>
 	</figure>
 	
-	<figure>
+	<figure data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" delay="300">
 		<img src="image/oheya03.jpg" alt="客室">
 		<figcaption>
 			<header>
@@ -175,24 +197,31 @@
 		<ul>
 			<li><a href="room.html">お部屋</a></li>
 			<li><a href="food.html">お料理</a></li>
-			<li><a href="bath.html">温泉</a></li>
-		<ul>
+			<li><a href="onsen.html">温泉</a></li>
+		</ul>
 	</nav>
 	
 	<div class="infomation">
 		<div class="footer-logo">
 		 	<img src="image/footer-logo.svg" alt="フッターロゴ">
 		</div>
-		<div class="footer-adress">
+		<div class="footer-address">
 			<p><span>&#12306;000-0000</span>山形県鶴岡市xxxxxxxxxx<p>
 			<p><span>TEL.000-0000-0000</span>FAX.00-0000-0000</p>
-		<div>
+		</div>
 	</div>
 	
 	<div class="copyright">
 		<small>Copyright &copy; 石井花壇 All Rights Reserved.</small>
 	</div>
 </footer>
+
+<!-- jQuery -->
+<script src="js/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/style.js"></script>
 </body>
 
 </html>

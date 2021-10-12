@@ -6,6 +6,30 @@ $border: #707070;
 //ここまで関数
 
 //ここから@mixin
+@mixin w1180 {
+	@media (max-width: 1179px) {
+		@content;
+	}
+}
+
+@mixin w1024 {
+	@media (max-width: 1123px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: 425px) {
+		@content;
+	}
+}
+
 //ここまで@mixin
 
 //ここから大枠スタイル
@@ -20,6 +44,18 @@ html {
 
 body {
 	font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+}
+
+body.fixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+
+
+main {
+	overflow: hidden;
 }
 
 //ここまで大枠スタイル
@@ -41,6 +77,27 @@ body {
 			object-fit: contain;
 		}
 	}
+	
+	@include mobile {
+		h2 {
+			font-size: calc(2.6rem + 10 * (100vw - 320px)/448);
+		}
+	}
+}
+
+.white-bg {
+	position: absolute;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(255,255,255,0.6);
+	z-index: 1;
+}
+
+@include mobile {
+	.br-mobile {
+		display: none;
+	}
 }
 
 //ここまで共有パーツ
@@ -54,6 +111,10 @@ body {
 @import "concept";
 @import "menu";
 @import "plan";
+@import "news";
+@import "access";
+@import "footer";
+@import "under";
 
 
 
