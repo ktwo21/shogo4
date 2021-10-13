@@ -31,15 +31,23 @@ $(function() {
 	
 	//モーダル
 	$("#js-modal-open").click(function() {
-		$(".modal").fadeToggle(300);
-		$(".white-bg").fadeToggle();
-		$("body").toggleClass("fixed");
+		if($(".hamburger-button, .hamburger-menu").hasClass("open")) {
+			$(".white-bg").fadeIn();
+			$(".modal").fadeToggle(300);
+			$("body").toggleClass("fixed");
+		} else {
+			$(".modal").fadeToggle(300);
+			$(".white-bg").fadeToggle();
+			$("body").toggleClass("fixed");
+		} 
+
 	});
 	
 	$("#close-button").click(function () {
 		$(".modal").fadeOut(300);
 		$(".white-bg").fadeOut();
 		$("body").removeClass("fixed");
+		$(".hamburger-button, .hamburger-menu").removeClass("open");
 	});
 	
 	//ナビゲーション

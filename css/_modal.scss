@@ -21,25 +21,12 @@
 	position: absolute;
 	top: 20px;
 	right: 22px;
-	padding: 20px;
 	cursor: pointer;
 	
-		
-	&::after,
-	&::before {
-		content: "";
-		display: block;
+	img {
 		width: 18px;
-		height: 1px;
-		background: #000;
-	}
-
-	&::after {
-		transform: rotate(-45deg);
-	}
-
-	&::before {
-		transform: rotate(45deg);
+		height: 18px;
+		object-fit: contain;
 	}
 }
 
